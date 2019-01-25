@@ -57,6 +57,8 @@ IF "%ERRORLEVEL%"=="0" (
 :: Launch the installer
 
 IF EXIST upgrade\upgrade_result DEL /Q upgrade\upgrade_result
+IF EXIST ossec-agent.status DEL /Q ossec-agent.status
+
 ECHO %DATE%%TIME% INFO: Starting new version installer. >> upgrade\upgrade.log
 
 NET STOP wazuh
